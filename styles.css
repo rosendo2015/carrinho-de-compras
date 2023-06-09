@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --color-brand-color: #9333ea;
+  --color-brand-color-light: #a855f7;
+  --color-brand-color-lighter: #c084fc;
+  --color-text-color-primary: #f9fafb;
+  --color-text-color-secondary: #e4e4e7;
+  --color-close-button-color: #a1a1aa;
+  --color-stroke-color: #3f3f46;
+  --color-surface-color: #18181b;
+  --color-background-color: #09090b;
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--color-background-color);
+  color: var(--color-text-color-primary);
+}
+#app {
+  height: 100vh;
+  max-width: 42.8rem;
+  display: grid;
+  margin-left: auto;
+  background-color: var(--color-surface-color);
+  grid-template-rows: max-content 1fr;
+}
+header {
+  display: flex;
+  aling-items: center;
+  justify-content: space-between;
+  padding: 2.4rem 3.2rem;
+  font-size: 2rem;
+  color: var(--color-text-color-secondary);
+  border-bottom: 1px solid var(--color-stroke-color);
+}
+
+main {
+  padding: 3.2rem;
+  display: grid;
+  gap: 4.8rem;
+  place-content: start;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-stroke-color);
+  border-radius: 0.8rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-background-color);
+}
+.item {
+  display: flex;
+  gap: 3.2rem;
+}
+.item img {
+  width: 10.4rem;
+  height: 10.4rem;
+  border-radius: 0.8rem;
+}
+.details {
+  width: 100%;
+}
+header .title {
+  color: var(--color-text-color-secondary);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+ 
+}
+header .title strong {
+  color: var(--color-text-color-primary);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+header i{
+  width: 1.3rem;
+  height: 1.3rem;
+  color: var(--color-close-button-color);
+  cursor: pointer;
+}
+main .title {
+  font-weight: 500;
+  font-size: 16px;
+  
+  color: var(--color-text-color-secondary);
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 24px;     /* fallback */
+  
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.price-qty {
+  margin-top: 1.6rem;
+  display: flex;
+  aling-items: center;
+  justify-content: space-between;
+}
+.price {
+  margin: 1.2rem 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.qty {
+  display: flex;
+  aling-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.qty span,
+.qty button {
+  font-weight: 700;
+  font-size: 16px;
+}
+.qty span {
+  margin: 1.2rem 0;
+}
+.qty button {
+  border-radius: 0.8rem;
+  background: transparent;
+  border: 1px solid var(--color-stroke-color);
+  padding: 1.2rem;
+  color: var(--color-brand-color-light);
+}
+.qty button.sub {
+}
+.qty button.sub:hover {
+  border-color: var(--color-brand-color-light);
+  color: var(--color-text-color-primary);
+}
+.qty button.add {
+  border-color: var(--color-brand-color-light);
+}
+.qty button.add:hover {
+  background-color: var(--color-brand-color-light);
+  color: var(--color-text-color-primary);
+}
+footer {
+  padding: 3.2rem;
+  border-top: 1px solid var(--color-stroke-color);
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  aling-items: center;
+
+  margin-bottom: 1.6rem;
+}
+.total span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-text-color-secondary);
+}
+.total strong {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-text-color-primary);
+}
+.cupon {
+  
+  display: flex;
+  aling-items: center;
+  justify-content: flex-end;
+  
+  gap: 0.8rem;
+}
+.cupon img {
+  color: var(--color-brand-color-light);  
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}
+.cupon span {
+  color: var(--color-brand-color-light);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+.cupon span:hover,
+.cupon img:hover {
+  color: var(--color-brand-color-lighter);
+}
+
+footer button {
+  background: var(--color-brand-color);
+  color: var(--color-text-color-primary);
+  padding: 2rem 11.1rem;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  border: 0;
+  border-radius: 0.8rem;
+  margin-top: 3.2rem;
+}
+footer button:hover {
+  background-color: var(--color-brand-color-light);
+}
